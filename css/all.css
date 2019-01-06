@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+.clearfix {
+  clear: both; }
+
+.wrap {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto; }
+  .wrap img {
+    position: absolute;
+    max-width: 100%;
+    height: 380px;
+    z-index: -1; }
+
+.header {
+  position: relative;
+  text-align: center; }
+  .header p {
+    text-align: center;
+    font-size: 40px;
+    color: #FFFFFF;
+    letter-spacing: 3.89px;
+    padding-top: 105px; }
+
+.option {
+  width: 452px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #FFFFFF;
+  border-radius: 3px;
+  margin-top: 80px; }
+
+.area {
+  float: left;
+  width: 800px;
+  height: 112px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #FFFFFF;
+  margin-top: 80px;
+  margin-left: 112px; }
+
+.area_select h2 {
+  text-align: left;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold; }
+
+.area_select li {
+  float: left; }
+  .area_select li input {
+    width: 130px;
+    height: 42px;
+    margin-left: 55px;
+    margin-right: 0px;
+    font-size: 18px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 3px; }
+
+.line {
+  margin-top: 80px;
+  border: 1px solid #559AC8;
+  border-style: dashed;
+  margin-bottom: 100px; }
+
+.content_area p {
+  color: #8A82CC;
+  font-size: 35px;
+  text-align: center; }
+
+content {
+  margin-left: 30px;
+  width: 100%; }
+
+.location li {
+  float: left;
+  width: 464px;
+  height: 285px;
+  margin-left: 30px;
+  margin-top: 50px;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+
+.location_text {
+  position: relative; }
+  .location_text img {
+    position: relative;
+    width: 100%;
+    height: 155px; }
+  .location_text h2 {
+    position: absolute;
+    color: #FFFFFF;
+    margin-top: 115px;
+    margin-left: 22px;
+    font-size: 24px; }
+  .location_text h1 {
+    position: absolute;
+    color: #FFFFFF;
+    margin-left: 400px;
+    margin-top: 125px; }
+  .location_text p {
+    padding: 0.5em;
+    margin-left: 25px; }
+    .location_text p img {
+      margin-right: 10px;
+      width: 18px;
+      height: 18px; }
+
+.space {
+  margin-left: 130px; }
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  margin-top: 30px;
+  text-align: center;
+  background-color: #559AC8; }
+  footer h2 {
+    position: relative;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 30px; }
+  footer p {
+    position: relative;
+    font-size: 14px;
+    color: #FFD366;
+    margin-top: 10px; }
