@@ -1,41 +1,50 @@
-var xhr = new XMLHttpRequest();
-var listarea = document.querySelector('#selc_option');
-var list_title = document.querySelector('#str_title');
-xhr.open('get','https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97',true);
+const listarea = document.querySelector('#selc_option');
+const list_title = document.querySelector('#str_title');
 
+const xhr = new XMLHttpRequest();
+xhr.open('get','https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97',true);
 xhr.send();
 
 xhr.onload = function(){
-	var call = JSON.parse(xhr.responseText);
+	let call = JSON.parse(xhr.responseText);
 	dataSelect = call.result.records;
 	
 
-	selectarea();    // Option SelectList 
+	selectarea();    
 	
 }
 
 //Option SelectList 使用
 function selectarea(e){
-	
-	var str = '';
-	str = '<option id="str_title" value="none">- - 請選擇行政區 - -</option>' ;
 
-	for (var i = 0; i < dataSelect.length; i++) 
-	{
-		
-		str += '<option value="' + dataSelect[i].Zone + '">' + dataSelect[i].Zone + '</option>' 
-		if (true) {}
+	let area = [];
+	for (let i = 0; i < dataSelect.length; i++) {
+		area.push(dataSelect[i].Zone);
+	};
+
+	//----
+	let selectZone = [];
+	area.forEach(function(value) {
+		if (selectZone.indexOf(value) == -1) {
+			selectZone.push(value);
+		};
+	});
+	//----
+	let str = '';
+	str = `<option id="str_title" value="none">- - 請選擇行政區 - -</option>` ;
+	for (let i = 0; i < selectZone.length; i++) {
+		//str += `<option value=" ${selectZone[i]} "> ${selectZone[i]} </option>`
+		str += '<option value="' + selectZone[i] + '">' + selectZone[i] + '</option>' 
 	}
-
 	listarea.innerHTML = str;
 }
 //------------------------------------------------------
 function optionChange(e){
-	var commands = document.querySelector('.content_area');
-	var main_content = document.querySelector('.location');
-	var select = e.target.value;
-	var str = '';
-	for (var i = 0; i < dataSelect.length; i++) {
+	const commands = document.querySelector('.content_area');
+	const main_content = document.querySelector('.location');
+	let select = e.target.value;
+	let str = '';
+	for (let i = 0; i < dataSelect.length; i++) {
 		if (select == dataSelect[i].Zone) {
 			str += 
 				'<li><div class="location_text"><h2>' + dataSelect[i].Name + '</h2><h1>' + dataSelect[i].Zone + '</h1><img src="' + dataSelect[i].Picture1 +
@@ -53,15 +62,15 @@ listarea.addEventListener('change', optionChange, false);
 
 
 //------------------------------------------------------
-var main_content = document.querySelector('.location');
-var traval_recommend = document.querySelector('.content_area');
+const main_content = document.querySelector('.location');
+const traval_recommend = document.querySelector('.content_area');
 
 
-var btn1 = document.querySelector('#btn_area1');
+let btn1 = document.querySelector('#btn_area1');
 btn1.addEventListener('click',function mainInfo(e) {
 	btnSelect = e.target.value;
-	var str = '';
-	for (var i = 0; i < dataSelect.length; i++) {
+	let str = '';
+	for (let i = 0; i < dataSelect.length; i++) {
 		if (btnSelect == dataSelect[i].Zone) {
 			str += 
 				'<li><div class="location_text"><h2>' + dataSelect[i].Name + '</h2><h1>' + dataSelect[i].Zone + '</h1><img src="' + dataSelect[i].Picture1 +
@@ -75,11 +84,11 @@ btn1.addEventListener('click',function mainInfo(e) {
 	}
 }, false);
 
-var btn2 = document.querySelector('#btn_area2');
+let btn2 = document.querySelector('#btn_area2');
 btn2.addEventListener('click',function mainInfo(e) {
 	btnSelect = e.target.value;
-	var str = '';
-	for (var i = 0; i < dataSelect.length; i++) {
+	let str = '';
+	for (let i = 0; i < dataSelect.length; i++) {
 		if (btnSelect == dataSelect[i].Zone) {
 			str += 
 				'<li><div class="location_text"><h2>' + dataSelect[i].Name + '</h2><h1>' + dataSelect[i].Zone + '</h1><img src="' + dataSelect[i].Picture1 +
@@ -92,11 +101,11 @@ btn2.addEventListener('click',function mainInfo(e) {
 	traval_recommend.innerHTML = '<p>' + btnSelect + '</p>';
 }, false);
 
-var btn3 = document.querySelector('#btn_area3');
+let btn3 = document.querySelector('#btn_area3');
 btn3.addEventListener('click',function mainInfo(e) {
 	btnSelect = e.target.value;
-	var str = '';
-	for (var i = 0; i < dataSelect.length; i++) {
+	let str = '';
+	for (let i = 0; i < dataSelect.length; i++) {
 		if (btnSelect == dataSelect[i].Zone) {
 			str += 
 				'<li><div class="location_text"><h2>' + dataSelect[i].Name + '</h2><h1>' + dataSelect[i].Zone + '</h1><img src="' + dataSelect[i].Picture1 +
@@ -109,11 +118,11 @@ btn3.addEventListener('click',function mainInfo(e) {
 	traval_recommend.innerHTML = '<p>' + btnSelect + '</p>';
 }, false);
 
-var btn4 = document.querySelector('#btn_area4');
+let btn4 = document.querySelector('#btn_area4');
 btn4.addEventListener('click',function mainInfo(e) {
 	btnSelect = e.target.value;
-	var str = '';
-	for (var i = 0; i < dataSelect.length; i++) {
+	let str = '';
+	for (let i = 0; i < dataSelect.length; i++) {
 		if (btnSelect == dataSelect[i].Zone) {
 			str += 
 				'<li><div class="location_text"><h2>' + dataSelect[i].Name + '</h2><h1>' + dataSelect[i].Zone + '</h1><img src="' + dataSelect[i].Picture1 +
