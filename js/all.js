@@ -49,8 +49,8 @@ function optionChange(e){
 			str += 
 				'<li><div class="location_text"><h2>' + dataSelect[i].Name + '</h2><h1>' + dataSelect[i].Zone + '</h1><img src="' + dataSelect[i].Picture1 +
 				 '" alt=""><p><img src="images/icons_clock.png" alt="">' 
-				 + dataSelect[i].Opentime + '</p><p><img src="images/icons_pin.png" alt="">' + dataSelect[i].Add + '</p><p><img src="images/icons_phone.png" alt="">' 
-				 + dataSelect[i].Tel + '<img class="space" src="images/icons_tag.png" alt="">' + dataSelect[i].Ticketinfo + '</p></div></li>'
+				 + dataSelect[i].Opentime + '</p><p><img src="https://z110x119c911.github.io/KaohsiungTraval/images/icons_pin.png" alt="">' + dataSelect[i].Add + '</p><p><img src="https://z110x119c911.github.io/KaohsiungTraval/images/icons_phone.png" alt="">' 
+				 + dataSelect[i].Tel + '<img class="space" src="https://z110x119c911.github.io/KaohsiungTraval/images/icons_tag.png" alt="">' + dataSelect[i].Ticketinfo + '</p></div></li>'
 		}
 		main_content.innerHTML = str;
 		
